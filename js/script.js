@@ -62,17 +62,19 @@ function sleep(ms) {
 let messageSending = async function() {
   await sleep(1000)
   $(".m1").removeClass("none")
-  await sleep(500)
+  await sleep(1000)
   $(".m2").removeClass("none")
   await sleep(2000)
   $(".m3").removeClass("none")
   await sleep(1000)
   $(".m4").removeClass("none")
-  await sleep(1000)
+  await sleep(2000)
   $(".m5").removeClass("none")
   await sleep(2000)
   $(".m6").removeClass("none")
-  await sleep(1000)
+  await sleep(2000)
   $(".m7").removeClass("none")
+  await sleep(1000)
+  $(".m8").removeClass("none")
 };
 
