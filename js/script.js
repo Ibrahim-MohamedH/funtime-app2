@@ -1,4 +1,4 @@
-let countToDate = new Date("Nov 1, 2022 00:00:00")
+let countToDate = new Date("Nov 1, 2023 00:00:00")
 let previousTimeBetweenDates
 let main = setInterval(() => {
   
@@ -18,8 +18,10 @@ let main = setInterval(() => {
 function flipAllCards(time) {
   const seconds = time % 60
   const minutes = Math.floor(time / 60) % 60
-  const hours = Math.floor(time / 3600)
+  const hours = Math.floor(time / 3600) % 24
+  const days = Math.floor(time / 86400)
 
+  flip(document.querySelector("[data-days]"), days)
   flip(document.querySelector("[data-hours-tens]"), Math.floor(hours / 10))
   flip(document.querySelector("[data-hours-ones]"), hours % 10)
   flip(document.querySelector("[data-minutes-tens]"), Math.floor(minutes / 10))
